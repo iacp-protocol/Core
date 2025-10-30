@@ -1,0 +1,15 @@
+# CODEOWNERS — réviseurs par défaut
+# TODO: quand les équipes GitHub "P1" et "P2" existeront,
+# remplace @iacp-protocol par @IACP-Protocol/P1 ou @IACP-Protocol/P2 selon le dossier.
+
+# Spécifications & Docs -> P1 (temp: compte unique)
+ /spec/              @iacp-protocol
+ /docs/              @iacp-protocol
+
+# Core code, sandbox, tests -> P2 (temp: compte unique)
+ /src/               @iacp-protocol
+ /sandbox/           @iacp-protocol
+ /tests/             @iacp-protocol
+
+# Fichiers CI/CD
+ /.github/           @iacp-protocol
