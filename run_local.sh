@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-python -m uvicorn iacp_core.app:app --reload --host 0.0.0.0 --port 8000
+# Lance l'app en indiquant explicitement où se trouve le code (./src)
+python -m uvicorn --app-dir src iacp_core.app:app --reload --host 0.0.0.0 --port 8000
