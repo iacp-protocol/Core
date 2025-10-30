@@ -1,0 +1,8 @@
+services:
+  iacp-core:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src:ro
+    restart: unless-stopped
