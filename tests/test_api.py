@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys
-# Rendre importable le code sous ./src avec layout "src/"
+# Layout "src/": ajouter ./src dans le path import
 sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 
 from fastapi.testclient import TestClient  # type: ignore
