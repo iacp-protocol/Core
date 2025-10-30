@@ -1,0 +1,31 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.poetry/
+.pytest_cache/
+.mypy_cache/
+
+# Env & OS
+.env
+.DS_Store
+Thumbs.db
+
+# Coverage & build
+coverage/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.log
