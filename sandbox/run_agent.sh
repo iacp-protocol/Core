@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Usage:
+#   AGENT_ID=agent_A PEER_INBOX_URL=http://localhost:8002/inbox PORT=8001 sandbox/run_agent.sh
+#   AGENT_ID=agent_B PEER_INBOX_URL=http://localhost:8001/inbox PORT=8002 sandbox/run_agent.sh
+
+set -euo pipefail
+
+export PYTHONPATH="${PYTHONPATH}:$(pwd)/src:$(pwd)"
+PORT="${PORT:-8001}"
+
+python -m uvicorn sandbox.agents.app:app --host 0.0.0.0 --port "${PORT}" --reload
