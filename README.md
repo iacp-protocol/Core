@@ -30,3 +30,4 @@ Ce dépôt contient le **cœur technique**, la **sandbox d’interopérabilité 
 ## Licence
 Ce dépôt est placé sous licence Apache-2.0 (voir `LICENSE`).
 La licence finale et la gouvernance seront confirmées avec P1.
+
