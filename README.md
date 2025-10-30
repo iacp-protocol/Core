@@ -4,6 +4,8 @@ Layer-1 d’interopérabilité universelle entre IA (objectif : le “HTTP de l�
 Ce dépôt contient le **cœur technique**, la **sandbox d’interopérabilité minimale (S0)** et l’outillage **CI/CD**.
 
 ## Objectifs (S0)
+
+![CI](https://github.com/iacp-protocol/Core/actions/workflows/ci.yml/badge.svg)
 - Répo public propre et structuré
 - CI/CD de base (lint, tests, build)
 - Sandbox minimale : échange ping ↔ pong entre deux agents
