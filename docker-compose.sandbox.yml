@@ -1,0 +1,28 @@
+services:
+  agent_a:
+    build:
+      context: .
+      dockerfile: Dockerfile.sandbox
+    container_name: iacp-agent-a
+    environment:
+      AGENT_ID: agent_A
+      # En réseau Docker, on adresse l'autre service par son nom DNS
+      PEER_INBOX_URL: http://agent_b:8000/inbox
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./sandbox/logs:/app/sandbox/logs
+    restart: unless-stopped
+
+  agent_b:
+    build:
+      context: .
+    container_name: iacp-agent-b
+    environment:
+      AGENT_ID: agent_B
+      PEER_INBOX_URL: http://agent_a:8000/inbox
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./sandbox/logs:/app/sandbox/logs
+    restart: unless-stopped
