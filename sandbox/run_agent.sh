@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-export PYTHONPATH="${PYTHONPATH}:$(pwd)/src:$(pwd)"
 PORT="${PORT:-8001}"
 
-python -m uvicorn sandbox.agents.app:app --host 0.0.0.0 --port "${PORT}" --reload
+# --app-dir . permet d'importer "sandbox.agents.app" depuis la racine du repo
+python -m uvicorn --app-dir . sandbox.agents.app:app --host 0.0.0.0 --port "${PORT}" --reload
