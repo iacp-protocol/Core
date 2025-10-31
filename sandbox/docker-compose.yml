@@ -1,0 +1,28 @@
+services:
+  agent_a:
+    build:
+      context: ..
+      dockerfile: sandbox/Dockerfile
+    environment:
+      - AGENT_ID=agent_A
+      - PEER_INBOX_URL=http://agent_b:8002/inbox
+      - PORT=8001
+    ports:
+      - "8001:8001"
+    volumes:
+      - ../src:/app/src
+      - ./logs:/app/sandbox/logs
+
+  agent_b:
+    build:
+      context: ..
+      dockerfile: sandbox/Dockerfile
+    environment:
+      - AGENT_ID=agent_B
+      - PEER_INBOX_URL=http://agent_a:8001/inbox
+      - PORT=8002
+    ports:
+      - "8002:8002"
+    volumes:
+      - ../src:/app/src
+      - ./logs:/app/sandbox/logs
